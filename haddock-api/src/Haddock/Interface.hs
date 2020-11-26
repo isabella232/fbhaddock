@@ -127,7 +127,6 @@ createIfaces verbosity modules flags instIfaceMap = do
   -- Ask GHC to tell us what the module graph is
   targets <- mapM (\filePath -> guessTarget filePath Nothing) modules
   setTargets targets
-  _modGraph <- depanal [] False
 
   out verbosity normal "Haddock coverage:"
 
